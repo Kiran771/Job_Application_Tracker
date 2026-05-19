@@ -1,0 +1,84 @@
+{
+  "name": "Job Application Tracker",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1zYJHLNyfeoFUSMCHwRxR_yp9AaMSXyjZr53sK2TIAY4",
+          "mode": "list",
+          "cachedResultName": "job application tracker",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zYJHLNyfeoFUSMCHwRxR_yp9AaMSXyjZr53sK2TIAY4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1586402408,
+          "mode": "list",
+          "cachedResultName": "Form responses 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zYJHLNyfeoFUSMCHwRxR_yp9AaMSXyjZr53sK2TIAY4/edit#gid=1586402408"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4ba50412-cde3-4958-94e0-051c4d1c4501",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "256Q1sRPp9VN0TMI",
+          "name": "Google Sheets Trigger OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "kiransaud51@gmail.com",
+        "subject": "New Job Application - Google Sheets Trigger",
+        "emailType": "text",
+        "message": "You applied for a new job!  Check your Job Application Tracker sheet for details.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        144,
+        144
+      ],
+      "id": "4b636c1c-a727-4544-ab8c-ed2906b49e03",
+      "name": "Send a message",
+      "webhookId": "9b18fcc6-6f9e-4a56-ab53-d063b9b609df",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "4PcxiyJBesFuj6w4",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {},
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "51e1e53e-2b81-4337-a26b-fd6ad3828205",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7620c5d227e3ce6fa03ae3d80ca3d0111c183d3695d977f126d60792747f063b"
+  },
+  "id": "h23KMFK80roaf7MH",
+  "tags": []
+}
